@@ -33,12 +33,15 @@ def daily_min(data):
     return np.min(data, axis=0)
 
 
-def s_dev(data):
-    """Computes and returns standard deviation for data."""
-    daily_s_dev = np.mean(data, axis=0)
-    devs = []
-    for entry in data:
-        devs.append((entry - daily_s_dev) * (entry - daily_s_dev))
+#def s_dev(data):
+#    """Computes and returns standard deviation for data."""
+#    daily_s_dev = np.mean(data, axis=0)
+#    devs = []
+#    for entry in data:
+#        devs.append((entry - daily_s_dev) * (entry - daily_s_dev))
 
-    s_dev2 = sum(devs) / len(data)
-    return {'standard deviation': s_dev2}
+#    s_dev2 = sum(devs) / len(data)
+#    return {'standard deviation': s_dev2}
+def s_dev(data):
+    """Compute the daily standard deviation across patients."""
+    return {'standard deviation': np.std(data, axis=0)}
