@@ -1,18 +1,22 @@
-# Introduction
+# OVeN FlamE
+## Owen's Very Nice inFlamation Exercise
+OVeN FlamE is a data processing system that manages trail data used in clinical inflammation studies
 
-This is a template software project repository used by the [Intermediate Research Software Development Skills In Python](https://github.com/carpentries-incubator/python-intermediate-development).
+## Main Features
+- Performs basic statistical analysis on clinical trial data
+- Accepts CSV and JSON filetypes
+- Generates plots of trial data
+- Uses MVC formatting for modularity
 
-## Purpose
+Modified as part of the intermediate python training programme at UK Atomic Energy Authority
 
-This repository is intended to be used as an example software project which is copied by learners of the 
-[Intermediate Research Software Development Skills In Python](https://github.com/carpentries-incubator/python-intermediate-development) course.
+## Prerequisites
+OVeN FlamE requires the following Python packages:
 
-This software project is not finished, does not contain a LICENCE file, the code is currently failing to run and contains some code style issues. 
-It is used as a starting point for the course - issues will be fixed and code will be added in a number of places during the course by learners in their own copies of the repository, as course topics are introduced.
+- [NumPy](https://www.numpy.org/) - makes use of NumPy's statistical functions
+- [Matplotlib](https://matplotlib.org/stable/index.html) - uses Matplotlib to generate statistical plots
 
-## Tests
+The following optional packages are required to run OVeN FlamE's unit tests:
 
-Several tests have been implemented already, some of which are currently failing.
-These failing tests set out the requirements for the additional code to be implemented during the workshop.
-
-The tests should be run using `pytest`, which will be introduced during the workshop.
+- [pytest](https://docs.pytest.org/en/stable/) - OVeN FlamE's unit tests are written using pytest
+- [pytest-cov](https://pypi.org/project/pytest-cov/) - Adds test coverage stats to unit testing
