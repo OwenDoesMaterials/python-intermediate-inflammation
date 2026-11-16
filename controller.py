@@ -1,5 +1,6 @@
 from inflammation.compute_data import analyse_data
 from inflammation.models import CSVDataSource, JSONDataSource
+import views
 
 directory = input("CSV Directory:")
 try:
@@ -14,5 +15,11 @@ except:
     print("No CSVs")
 
 # print(loaded_data)
-data = analyse_data(data_source)
-print(data)
+
+# data = analyse_data(data_source)
+# print(data)
+data = analyse_data(loaded_data)
+graph_data = {
+    'standard deviation by day': data,
+}
+views.visualize(graph_data)
